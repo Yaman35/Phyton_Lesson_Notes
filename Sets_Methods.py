@@ -2,7 +2,6 @@
 """
 Created on Sun Apr 11 00:19:26 2021
 
-@author: Joseph Forest
 """
 
 # önce kümelerin metodlarını liste üreteci yöntemi ile görelim.
