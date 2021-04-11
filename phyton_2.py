@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Phyton-2.ipynb
 
-Noted by Yaman
+Noted by Yaman35
 
 Original file is located at
     https://colab.research.google.com/drive/1tBjRfU6L-raM8tItk-2lIbw0a_6vpOPL
