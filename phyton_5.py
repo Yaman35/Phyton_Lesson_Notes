@@ -507,6 +507,30 @@ family = {'name1' : 'Hüseyin', 'name2' : 'Emine', 'name3' : 'Yavuz Ali'}
 print("emine" in family.values()) # Phyton case sensitive olduğu için çıktı False olur
 print("Emine" in family.values()) # Emine value'su family dictionary si içinde var mı ? demektir
 
+monthConversions = {  #Dictionaries Oluşturma
+                    
+    "Jan": "January",  # İlk kısım key, ikinci kısım value. Key lerin herbirisi unique olmalıdır. Key ler sadece string olmak zorunda değildir, number şeklinde de olabilir
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December",
+}
+
+print(monthConversions["Nov"]) # Bu şekilde dictionary içerisinde key karşılığı olan value çağırma işlemini gerçekleştirebiliriz
+
+print(monthConversions.get("Dec")) # Bu şekilde get() fonksiyonu ile de çağırma işlemini gerçekleştirebiliriz
+
+print(monthConversions.get("Luv"))  # Eğer olmayan bir key yazılırsa bu şekilde None sonucu alınır
+
+print(monthConversions.get("Luv", "Not a valid key")) # Olmayan bir key yazılırsa gösterilmek istenen çıktı bu şekilde get() fonksiyonu içinde ikinci sırada yazılabilir
+
 """### **Nested (İç içe) Dictionaries**"""
 
 school_records={
