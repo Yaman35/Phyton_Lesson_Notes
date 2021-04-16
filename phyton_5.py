@@ -11,45 +11,45 @@ Original file is located at
 
 city = ['New York', 'London', 'Istanbul', 'Seoul', 'Sydney']
 print(city[-4]) # Negatif indexlemede -1 den başlar, hatırlayacak olursak pozitif indexlemede 0 dan başlıyordu
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 reef = ['swordfish', 'shark', 'whale', 'jellyfish', 'lobster', 'squid', 'octopus']
 print(reef[-3:]) # index[-3] ve sonrasını yazdır demektir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 reef = ['swordfish', 'shark', 'whale', 'jellyfish', 'lobster', 'squid', 'octopus']
 print(reef[:-3]) # index[-3] e kadar olanları baştan başlayarak yazdır demektir, index[-3] dahil değil !
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 reef = ['swordfish', 'shark', 'whale', 'jellyfish', 'lobster', 'squid', 'octopus']
 print(reef[::-1])  # Step "-" olduğundan sondan başlayarak sola doğru 1 er atlayarak git demektir, aslında o da listeleri tersten yazdırma anlamına gelir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 reef = ['swordfish', 'shark', 'whale', 'jellyfish', 'lobster', 'squid', 'octopus']
 print(reef[::-2]) # Step "-" olduğundan sondan başlayarak sola doğru 2 şer atlayarak git demektir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 odd_no = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 print(odd_no[7:3:-1]) # Step - olduğundan index[7] den başlayarak sola doğru 1 er atlayarak index[3] e kadar yazdır demektir, index[3] dahil değil !
 print(odd_no[2:6:-1]) # Step - olduğundan index[2] den başlayarak sola doğru 1 er atlayarak yazdır demektir, lakin index[2] nin soluna doğru gidildiğinde index[6] olmadığı için bu şekilde boş liste verir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 harfler = "a b c d e f g h i j".split() # split fonksiyonu ile kolayca liste yapabiliriz, içerisindeki karaktere göre böler 
 print(harfler) # Aslında burada boşluklardan ayırarak liste yaptı
 
 harfler = "a,b,c,d,e,f,g,h,i,j".split(",") # split fonksiyonu ile kolayca liste yapabiliriz, içerisindeki karaktere göre böler 
 print(harfler) # Aslında burada da virgüllerden ayırarak liste yaptı, fakat her ikisinin çıktısı da aynı olur çünkü listede elemanlar virgüllerle ayrılır
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 names = ["ahmet", "mehmet", "hasan", "hüseyin"]
 result = sorted(names) # sorted() fonksiyonu alfabetik sıralamaya göre sıralar
 print(result)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cities = ["Addis Ababa", "Tokyo", "Rome", "İstanbul", "Rio"]
 print(sorted(cities)) # Alfabetik sıraya göre sıraladık
 print(sorted(cities, key=len)) # Şehirlerin uzunluklarına göre sıraladık.(ör: sorted()) üzerine gelince gözükür fonkiyonların parametreleri)
                                # key parameteresine yazılacak olan fonksiyonun işlevine göre sıralar, burada len() fonksiyonu kullanıldı
 print(sorted(cities, key=len, reverse=True)) # Burada da sorted() fonksiyon parametrelerinden reverse default olarak False gelir onu True yaparak listeyi tersten yazdırabildik
 print(cities) # Görüleceği üzere orjinal liste aynı kaldı
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cities = ["Addis Ababa", "Tokyo", "Rome", "İstanbul", "Rio"]
 cities.sort(key = len, reverse = False ) # Bu şekilde de yapılabilir. sort() fonksiyonu kullanımı. Fakat burada sort() fonksiyonu ile listeyi kalıcı olarak değiştiriyoruz
 print(cities)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 numbers = [1, 3, 7, 4, 3, 0, 3, 6, 3, 4, 7, 4, 3, 2, 6, 8, 7, 6, 5, 3, 3, 4, 7, 9, 3, ]
 
 most_frequent = max(numbers, key = numbers.count) # Burada max() fonksiyonu keyi olarak count belirledik, ve listenin içinde en çok geçen elemanı verir
@@ -58,7 +58,7 @@ repeat = numbers.count(most_frequent)
 
 result = f"the most frequent number is {most_frequent} and it was {repeat} times repeated"
 print(result)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 my_list = [1, 2, 3, 4, 5, 6]
 new_list = []
 
@@ -199,20 +199,25 @@ print(coordinates[1]) # (19, 0) tuple yerine integer 10 geldi
 
 number = tuple(range(11)) # range(1,11) de olurdu
 print(number)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+T = (1, 2, 3, 4, 5, 6, 7, 8)
+print(T[T.index(5)], end = "\n")
+print(T[T[T[6]-3]-6])
+print(T.index(5))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 mix_value = (10, False, 'fruit', 1.618)
 mix_value.append(['vegetable', 2+3j]) # Hata verir çünkü append() ve remove() özellikleri tuple lar için geçerli değildir
 mix_value.remove(['fruit'])
 
 print(len(mix_value))
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import sys # getsizeof() methodunu çağırabilmek için yazmak şarttır
 x = [1,2,3] # List ve tupla ların boyut karşılaştırması
 y = (1,2,3)
 
 print(sys.getsizeof(x)) # Bite cinsinden hafızada yer kaplaması ile ilgili kullanım. Dolayısıyla tupple lar listelere göre daha az yer kaplar
 print(sys.getsizeof(y))
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # It is easy to convert between list and tuple as in the examples below :
 my_tuple=(1, 4, 3, 4, 5, 6, 7, 4)
 my_list = list(my_tuple)
@@ -221,14 +226,14 @@ print()
 my_list = [1, 4, 3, 4, 5, 6, 7, 4]
 my_tuple = tuple(my_list)
 print(type(my_tuple), my_tuple)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 tuple_1 = 'h', 'a', 'p', 'p', 'y'
 tuple_2 = 1, 3, 5
 print(tuple_1)
 print(type(tuple_1))
 print(tuple_2)
 print(type(tuple_2))
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 vowels = ('a', 'e', 'i', 'o', 'i', 'u')
 
 index = vowels.index('e') 
@@ -711,7 +716,7 @@ print(set_1)
 
 set_3 = set(((1,2),(3,4),(4,6),(1,2))) # Fakat görüleceği üzere iç içe tuple ile bir set yapılabilmektedir
 print(set_3)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """### **Main Operations with Sets**
 
 print(a - b)  # same as '.difference()' method
@@ -738,7 +743,7 @@ These methods are :
 
 .difference() : Gets the difference of two sets.
 """
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a = set('abracadabra')
 print(a) # Görüleceği üzere tekrarlar gitti
 
@@ -750,7 +755,7 @@ print(b)
 
 print(a - b)  # same as '.difference()' method (a kümesinde olup b kümesinde olmayanlar demektir)
 print(a.difference(b)) # Bu şekilde difference() methodu ile de bulunabilmektedir.
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a = set('abracadabra')
 b = set('alacazam')
 
@@ -759,7 +764,7 @@ print(b)
 
 print(a | b)  # same as '.union()' method (a birleşim b kümesi demektir)
 print(a.union(b)) # Bu şekilde union() methodu ile de bulunabilmektedir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a = set('abracadabra')
 b = set('alacazam')
 
@@ -768,7 +773,7 @@ print(b)
 
 print(a & b)  # same as '.intersection()' method (a kesişim b kümesi)
 print(a.intersection(b)) # bu şekilde intersection() methodu ile de bulunabilmektedir
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a = set('abracadabra')
 
 a.remove('c') # we delete 'c' from the set
@@ -776,6 +781,6 @@ print(a)
 
 a.add('c') # we add 'c' again into the set
 print(a)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 print(set('listen to the voice of enlisted'))
 print(len(set('listen to the voice of enlisted'))) # Çünkü aynı olanları çıkartır (unique olmalı)
